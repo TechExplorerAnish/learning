@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>tic-tac-toe</title>
+</head>
+
+<body>
+    <div class="mgs-container hidden">
+        <div class="mgsBox">
+            <span id="mgsTitle">Game Over</span>
+            <div class="mgs">Player X wins</div>
+            <button id="newgame">Play Again</button>
+        </div>
+    </div>
+    <main><div class="container ">
+        <h1>Tic Tac Toe</h1>
+        <div class="subCont">
+            <div class="currentTurn">Current Turn: <span id="turn"></span></div>
+            <img src="./assets/unmute.svg" id="icon" alt="icon">
+        </div>
+        <div class="gameBoard">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <button id="reset">reset</button>
+    </div>
+    </main>
+</body>
+<script src="./app.js"></script>
+
+</html>

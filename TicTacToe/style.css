@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mgs-container {
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mgsBox {
+    min-height: 200px;
+    min-width: 280px;
+    border-radius: 18px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.541),inset -4px 4px 10px rgba(145, 9, 248, 0.142);
+}
+
+#mgsTitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(100, 111, 237);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mgs {
+    color: rgb(8, 8, 8);
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#newgame {
+    height: 30px;
+    padding: 0px 10px;
+    font-size: 14px;
+    background-color: rgb(107, 58, 230);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.5), inset -2px 2px 6px rgba(255, 255, 255, 0.393);
+}
+
+#newgame:hover {
+    background-color: rgb(81, 45, 172);
+    scale: 1.1;}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.subCont{
+    width: 300px;
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#icon{
+    cursor: pointer;
+}
+.currentTurn{
+    font-family:monospace;
+    font-size: 18px;
+}
+
+.gameBoard {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.box {
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(103, 55, 234);
+    text-shadow: 2px 2px 3px currentColor;
+    background-color: white;
+    cursor: pointer;
+}
+
+#reset {
+    height: 35px;
+    min-width: 120px;
+    padding: 0px 30px;
+    font-size: 17px;
+    background-color: rgb(107, 58, 230);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.5), inset -2px 2px 6px rgba(255, 255, 255, 0.393);
+}
+#reset:hover{
+    background-color: rgb(81, 45, 172);
+    scale: 1.1;
+
+}
+.currentTarget{
+    background-color: rgb(248, 232, 234);
+}
+.hidden {
+    display: none;
+}
