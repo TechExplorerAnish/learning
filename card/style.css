@@ -1,0 +1,124 @@
+:root {
+  --mdw: 1200px;
+  --fc-heading: hsl(234, 12%, 34%);
+  --fc-body: hsl(229, 6%, 66%);
+  --card-bg: hsl(0, 0%, 98%);
+
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-orange: hsl(34, 97%, 64%);
+
+  --fs-900: 1.625rem;
+  --fs-600: 1.25rem;
+  --fs-400: 0.9375rem;
+
+  --fw-bold: 600;
+  --fw-light: 400;
+  --fw-verylight: 200;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--fc-body);
+  font-size: var(--fs-400);
+  line-height: 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+h1,
+h2 {
+  color: var(--fc-heading);
+}
+header h1 {
+  font-size: var(--fs-900);
+  color: var(--fc-heading);
+  font-weight: var(--fw-verylight);
+}
+
+header span {
+  display: block;
+  font-weight: var(--fw-bold);
+  color: var(--fc-heading);
+  margin-top: 1.1rem;
+}
+
+header p {
+  max-width: 500px;
+  font-size: var(--fs-400);
+  margin-block-start: 1.5rem;
+  margin: 0 auto;
+}
+
+.container {
+  --bts: 4px;
+  --gap: 2rem;
+  max-width: var(--mdw);
+  display: grid;
+  margin: 0 auto;
+  gap: var(--gap);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  padding: 1.3rem;
+  border-top: var(--bts) solid;
+  box-shadow: 0rem 0.81rem 2rem -1rem rgb(10 90 178 / 0.42);
+}
+.card h2 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.5rem;
+}
+.card img {
+  margin: 2.5rem 0;
+  float: right;
+}
+.card p {
+  margin: 0;
+}
+.card1 {
+  border-color: var(--clr-cyan);
+}
+.card2 {
+  border-color: var(--clr-red);
+}
+.card3 {
+  border-color: var(--clr-orange);
+}
+.card4 {
+  border-color: var(--clr-blue);
+}
+
+@media screen and (min-width: 800px) {
+  .card1 {
+    grid-area: card1;
+  }
+  .card2 {
+    grid-area: card2;
+  }
+  .card3 {
+    grid-area: card3;
+  }
+  .card4 {
+    grid-area: card4;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      ".card2."
+      "card1 card2 card4"
+      "card1 card3 card4"
+      ".card3.";
+  }
+}
